@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Pro</title>
+    <title>Portfolio Alejandro Girardi</title>
 
     <!-- TAILWIND CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -951,7 +951,7 @@
                 messageDiv.textContent =
                     'Error de conexión. Por favor, verifica tu conexión a internet e intenta nuevamente.';
                 messageDiv.className =
-                'mb-4 p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-300';
+                    'mb-4 p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-300';
                 messageDiv.classList.remove('hidden');
             } finally {
                 // Restaurar botón
