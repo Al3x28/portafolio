@@ -42,18 +42,20 @@ RUN apk add --no-cache \
     oniguruma-dev \
     libxml2-dev \
     linux-headers \
+    sqlite-dev \
+    libzip-dev \
     $PHPIZE_DEPS
 
 # Instalar extensiones de PHP requeridas por Laravel
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
-    pdo_mysql \
     pdo_sqlite \
     mbstring \
     exif \
     pcntl \
     bcmath \
     gd \
+    zip \
     opcache
 
 # Instalar Composer (gestor de dependencias de PHP)
