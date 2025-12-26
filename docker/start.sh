@@ -12,14 +12,24 @@ mkdir -p /var/www/html/bootstrap/cache
 # Asegurar permisos correctos
 chown -R www-data:www-data /var/www/html/storage
 chown -R www-data:www-data /var/www/html/bootstrap/cache
+echo "📦 Configurando permisos..."
+
+# Asegurar permisos correctos (incluyendo public)
+chown -R www-data:www-data /var/www/html
 chmod -R 775 /var/www/html/storage
 chmod -R 775 /var/www/html/bootstrap/cache
 
-echo "📦 Optimizando aplicación Laravel..."
+echo "📂 Verificando archivos (Debug)..."
+ls -la /var/www/html/public
 
-# Cache de configuración para producción
+echo "📦 Limpiando cachés..."
+
+# Limpiar cache primero
+php artisan optimize:clear
+
+# Cache solo de configuración (rutas a veces dan problemas si hay closures)
 php artisan config:cache
-php artisan route:cache
+# php artisan route:cache  <-- DESACTIVADO POR AHORA PARA DEBUG
 php artisan view:cache
 
 echo "✅ Aplicación lista. Iniciando servicios..."
