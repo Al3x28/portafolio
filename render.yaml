@@ -1,0 +1,30 @@
+services:
+  # Servicio web principal
+  - type: web
+    name: portafolio-laravel
+    env: docker
+    plan: free
+    # Archivo Dockerfile a usar
+    dockerfilePath: ./Dockerfile
+    # Variables de entorno necesarias para Laravel
+    envVars:
+      - key: APP_NAME
+        value: Portafolio
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        sync: false
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: SESSION_DRIVER
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
