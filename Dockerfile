@@ -40,7 +40,9 @@ RUN apk add --no-cache \
     libjpeg-turbo-dev \
     freetype-dev \
     oniguruma-dev \
-    libxml2-dev
+    libxml2-dev \
+    linux-headers \
+    $PHPIZE_DEPS
 
 # Instalar extensiones de PHP requeridas por Laravel
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
