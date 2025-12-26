@@ -9,7 +9,7 @@ services:
     # Variables de entorno necesarias para Laravel
     envVars:
       - key: APP_NAME
-        value: Portafolio
+        value: Portafolio Alejandro Girardi
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
@@ -20,11 +20,16 @@ services:
         sync: false
       - key: LOG_CHANNEL
         value: stderr
+      # Sin base de datos - landing page estática
       - key: DB_CONNECTION
         value: sqlite
       - key: SESSION_DRIVER
-        value: database
+        value: file
       - key: CACHE_STORE
-        value: database
+        value: file
       - key: QUEUE_CONNECTION
-        value: database
+        value: sync
+      # Configuración de email (opcional - para formulario de contacto)
+      - key: MAIL_MAILER
+        value: log
+

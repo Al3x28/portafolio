@@ -15,23 +15,12 @@ chown -R www-data:www-data /var/www/html/bootstrap/cache
 chmod -R 775 /var/www/html/storage
 chmod -R 775 /var/www/html/bootstrap/cache
 
-# Si existe la base de datos SQLite, asegurar permisos
-if [ -f "/var/www/html/database/database.sqlite" ]; then
-    chown www-data:www-data /var/www/html/database/database.sqlite
-    chmod 664 /var/www/html/database/database.sqlite
-fi
-
 echo "📦 Optimizando aplicación Laravel..."
 
 # Cache de configuración para producción
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
-
-echo "🔧 Ejecutando migraciones de base de datos..."
-
-# Ejecutar migraciones (crear tablas si no existen)
-php artisan migrate --force --no-interaction
 
 echo "✅ Aplicación lista. Iniciando servicios..."
 
