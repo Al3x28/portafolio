@@ -13,8 +13,8 @@ RUN npm install -g pnpm
 # Copiar archivos de dependencias de Node
 COPY package*.json pnpm-lock.yaml* ./
 
-# Instalar dependencias de Node con pnpm
-RUN pnpm install --frozen-lockfile
+# Instalar dependencias de Node con pnpm sin exigir lockfile estricto
+RUN pnpm install
 
 # Copiar archivos del proyecto
 COPY . .
