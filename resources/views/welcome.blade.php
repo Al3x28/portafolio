@@ -11,6 +11,16 @@
 
     <!-- Estilos personalizados opcionales -->
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         @keyframes fade-in {
             from {
                 opacity: 0;
@@ -55,7 +65,8 @@
     </style>
 </head>
 
-<body class="bg-[#06283D] dark:bg-[#0a0a0a] dark:text-[#EDEDEC] text-[#f3f3f3] flex flex-col items-center min-h-screen">
+<body
+    class="bg-[#06283D] dark:bg-[#0a0a0a] dark:text-[#EDEDEC] text-[#f3f3f3] flex flex-col items-center min-h-screen overflow-x-hidden">
 
     <!-- HEADER -->
     <header id="navbar"
@@ -79,8 +90,8 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="mt-32 w-full max-w-4xl px-6 space-y-32 text-center text-lg">
-        <section id="inicio" class="h-screen flex flex-col justify-center items-center px-6">
+    <main class="mt-32 w-full max-w-4xl px-4 sm:px-6 space-y-16 sm:space-y-32 text-center text-lg">
+        <section id="inicio" class="h-screen flex flex-col justify-center items-center px-4 sm:px-6 overflow-hidden">
             <div class="max-w-4xl mx-auto text-center">
 
                 <!-- Badge de Saludo -->
@@ -151,7 +162,7 @@
                 </div>
 
                 <!-- Indicador de Scroll -->
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
                     <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -161,7 +172,7 @@
             </div>
         </section>
 
-        <section id="sobre-mi" class="min-h-screen flex flex-col justify-center px-6 py-20">
+        <section id="sobre-mi" class="min-h-screen flex flex-col justify-center px-4 sm:px-6 py-20">
             <div class="max-w-4xl mx-auto">
                 <!-- Título Principal -->
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">Sobre mí</h2>
@@ -279,7 +290,7 @@
             </div>
         </section>
 
-        <section id="experiencia" class="min-h-screen flex flex-col justify-center px-6 py-20">
+        <section id="experiencia" class="min-h-screen flex flex-col justify-center px-4 sm:px-6 py-20">
             <div class="max-w-5xl mx-auto w-full">
                 <!-- Título Principal -->
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">Experiencia</h2>
@@ -465,7 +476,7 @@
             </div>
         </section>
 
-        <section id="proyectos" class="min-h-screen flex flex-col justify-center px-6 py-20">
+        <section id="proyectos" class="min-h-screen flex flex-col justify-center px-4 sm:px-6 py-20">
             <div class="max-w-6xl mx-auto w-full">
                 <!-- Título Principal -->
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">Proyectos</h2>
@@ -479,7 +490,7 @@
 
                     <!-- Proyecto 1: Sistema POS -->
                     <div
-                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
                         <!-- Imagen del Proyecto -->
                         <div
                             class="relative h-48 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 overflow-hidden">
@@ -518,7 +529,7 @@
 
                     <!-- Proyecto 2: Sistema ERP -->
                     <div
-                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
                         <div class="relative h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <span class="text-6xl opacity-50">⚙️</span>
@@ -554,7 +565,7 @@
 
                     <!-- Proyecto 3: WMS Pescadería -->
                     <div
-                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
                         <div
                             class="relative h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -588,7 +599,7 @@
 
                     <!-- Proyecto 4: Migrador de Data -->
                     <div
-                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-amber-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-amber-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
                         <div
                             class="relative h-48 bg-gradient-to-br from-amber-500/20 to-orange-500/20 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -622,7 +633,7 @@
 
                     <!-- Proyecto 5: Ejemplo con imagen real -->
                     <div
-                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
                         <!-- Aquí irá tu imagen real -->
                         <div class="relative h-48 bg-gray-700 overflow-hidden">
                             <!-- Reemplaza el src con la ruta de tu imagen -->
@@ -655,7 +666,7 @@
 
                     <!-- Proyecto 6: Otro ejemplo -->
                     <div
-                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-rose-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-rose-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
                         <div class="relative h-48 bg-gradient-to-br from-rose-500/20 to-pink-500/20 overflow-hidden">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <span class="text-6xl opacity-50">🚀</span>
@@ -689,8 +700,8 @@
             </div>
         </section>
 
-        <section id="contacto" class="min-h-screen flex flex-col justify-center px-6 py-20">
-            <div class="max-w-5xl mx-auto w-full">
+        <section id="contacto" class="min-h-screen flex flex-col justify-center px-4 sm:px-6 py-20">
+            <div class="max-w-5xl mx-auto w-full px-2 sm:px-0">
                 <!-- Título Principal -->
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center">Contacto</h2>
                 <p
@@ -698,15 +709,15 @@
                     ¿Tienes un proyecto en mente o quieres colaborar? Estaré encantado de escucharte
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 gap-6 md:gap-8">
 
                     <!-- Columna Izquierda: Información de Contacto -->
                     <div class="space-y-6">
-                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-6">Información de Contacto</h3>
 
                         <!-- Email -->
                         <div
-                            class="flex items-start gap-4 p-4 bg-gray-800/50 dark:bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-blue-500/50 transition-colors">
+                            class="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-gray-800/50 dark:bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-blue-500/50 transition-colors">
                             <div
                                 class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
                                 <span class="text-2xl">📧</span>
@@ -714,7 +725,7 @@
                             <div>
                                 <h4 class="font-semibold text-blue-400 mb-1">Email</h4>
                                 <a href="mailto:alejandrogirardi99@gmail.com"
-                                    class="text-gray-300 hover:text-blue-400 transition-colors">
+                                    class="text-gray-300 hover:text-blue-400 transition-colors text-sm md:text-base break-all">
                                     alejandrogirardi99@gmail.com
                                 </a>
                             </div>
@@ -722,7 +733,7 @@
 
                         <!-- Teléfono -->
                         <div
-                            class="flex items-start gap-4 p-4 bg-gray-800/50 dark:bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-green-500/50 transition-colors">
+                            class="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-gray-800/50 dark:bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-green-500/50 transition-colors">
                             <div
                                 class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
                                 <span class="text-2xl">📱</span>
@@ -738,7 +749,7 @@
 
                         <!-- Ubicación -->
                         <div
-                            class="flex items-start gap-4 p-4 bg-gray-800/50 dark:bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-purple-500/50 transition-colors">
+                            class="flex items-start gap-3 md:gap-4 p-3 md:p-4 bg-gray-800/50 dark:bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-purple-500/50 transition-colors">
                             <div
                                 class="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
                                 <span class="text-2xl">📍</span>
@@ -770,9 +781,9 @@
 
                     <!-- Columna Derecha: Formulario de Contacto -->
                     <form id="contactForm" action="{{ route('contact.store') }}" method="POST"
-                        class="bg-gray-800/50 dark:bg-gray-900/50 rounded-lg p-6 border border-gray-700/50">
+                        class="bg-gray-800/50 dark:bg-gray-900/50 rounded-lg p-4 md:p-6 border border-gray-700/50">
                         @csrf
-                        <h3 class="text-2xl font-bold mb-6">Envíame un mensaje</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-6">Envíame un mensaje</h3>
 
                         <!-- Mensaje de respuesta -->
                         <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
