@@ -710,11 +710,11 @@
                     ¿Tienes un proyecto en mente o quieres colaborar? Estaré encantado de escucharte
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="max-w-2xl mx-auto">
 
-                    <!-- Columna Izquierda: Información de Contacto -->
+                    <!-- Columna: Información de Contacto -->
                     <div class="space-y-6">
-                        <h3 class="text-xl md:text-2xl font-bold mb-6">Información de Contacto</h3>
+                        <h3 class="text-xl md:text-2xl font-bold mb-6 text-center">Información de Contacto</h3>
 
                         <!-- Email -->
                         <div
@@ -762,11 +762,11 @@
                         </div>
 
                         <!-- Redes Sociales -->
-                        <div class="pt-4">
+                        <div class="pt-4 text-center">
                             <h4 class="font-semibold text-gray-300 mb-4">Encuéntrame en:</h4>
-                            <div class="flex gap-3">
+                            <div class="flex gap-3 justify-center">
                                 <!-- LinkedIn -->
-                                <a href="www.linkedin.com/in/alejandro-girardi" target="_blank"
+                                <a href="https://www.linkedin.com/in/alejandro-girardi" target="_blank"
                                     rel="noopener noreferrer"
                                     class="w-12 h-12 bg-blue-600/20 hover:bg-blue-600/30 rounded-lg flex items-center justify-center transition-colors group">
                                     <span class="text-xl group-hover:scale-110 transition-transform">💼</span>
@@ -779,81 +779,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Columna Derecha: Formulario de Contacto -->
-                    <form id="contactForm" action="{{ route('contact.store') }}" method="POST"
-                        class="bg-gray-800/50 dark:bg-gray-900/50 rounded-lg p-4 md:p-6 border border-gray-700/50">
-                        @csrf
-                        <h3 class="text-xl md:text-2xl font-bold mb-6">Envíame un mensaje</h3>
-
-                        <!-- Mensaje de respuesta -->
-                        <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
-
-                        <div class="space-y-4">
-                            <!-- Nombre -->
-                            <div>
-                                <label for="nombre" class="block text-sm font-medium text-gray-300 mb-2">
-                                    Nombre completo
-                                </label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez"
-                                    class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 transition-colors" />
-                                <span class="text-red-400 text-sm error-message" id="error-nombre"></span>
-                            </div>
-
-                            <!-- Email -->
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
-                                    Email
-                                </label>
-                                <input type="email" id="email" name="email" placeholder="tu@email.com"
-                                    class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 transition-colors" />
-                                <span class="text-red-400 text-sm error-message" id="error-email"></span>
-                            </div>
-
-                            <!-- Asunto -->
-                            <div>
-                                <label for="asunto" class="block text-sm font-medium text-gray-300 mb-2">
-                                    Asunto
-                                </label>
-                                <input type="text" id="asunto" name="asunto"
-                                    placeholder="Propuesta de colaboración"
-                                    class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 transition-colors" />
-                                <span class="text-red-400 text-sm error-message" id="error-asunto"></span>
-                            </div>
-
-                            <!-- Mensaje -->
-                            <div>
-                                <label for="mensaje" class="block text-sm font-medium text-gray-300 mb-2">
-                                    Mensaje
-                                </label>
-                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto o consulta..."
-                                    class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400 resize-none transition-colors"></textarea>
-                                <span class="text-red-400 text-sm error-message" id="error-mensaje"></span>
-                            </div>
-
-                            <!-- Botón Enviar -->
-                            <button type="submit" id="submitBtn"
-                                class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 group">
-                                <span id="btnText">Enviar mensaje</span>
-                                <span id="btnArrow" class="group-hover:translate-x-1 transition-transform">→</span>
-                                <span id="btnSpinner" class="hidden">
-                                    <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <circle class="opacity-25" cx="12" cy="12" r="10"
-                                            stroke="currentColor" stroke-width="4"></circle>
-                                        <path class="opacity-75" fill="currentColor"
-                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </button>
-
-                            <!-- Mensaje de privacidad -->
-                            <p class="text-xs text-gray-500 text-center mt-4">
-                                Tus datos están seguros y solo serán usados para responderte
-                            </p>
-                        </div>
-                    </form>
 
                 </div>
 
