@@ -30,10 +30,10 @@ class ContactController extends Controller
                 'message' => '¡Mensaje enviado con éxito! Te responderé pronto.',
             ]);
 
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctame directamente por email.',
+                'message' => 'Error: ' . $e->getMessage(),
             ], 500);
         }
     }
