@@ -437,8 +437,8 @@
                                 <!-- Next.js -->
                                 <div class="bg-gray-700/30 rounded-md p-4 text-center">
                                     <div class="text-3xl mb-2">⚛️</div>
-                                    <h4 class="font-semibold text-white mb-1">Next.js</h4>
-                                    <p class="text-xs text-gray-400 mb-2">Framework de React</p>
+                                    <h4 class="font-semibold text-white mb-1">Vue.js</h4>
+                                    <p class="text-xs text-gray-400 mb-2">Framework de JavaScript</p>
                                     <p class    ="text-xs text-gray-500">Construcción de interfaces modernas y
                                         dinámicas en el Front-end</p>
                                 </div>
@@ -455,7 +455,7 @@
                                 <!-- MariaDB -->
                                 <div class="bg-gray-700/30 rounded-md p-4 text-center">
                                     <div class="text-3xl mb-2">🗄️</div>
-                                    <h4 class="font-semibold text-white mb-1">MariaDB</h4>
+                                    <h4 class="font-semibold text-white mb-1">PostgreSQL</h4>
                                     <p class="text-xs text-gray-400 mb-2">Base de Datos</p>
                                     <p class="text-xs text-gray-500">Creación y administración eficiente de bases de
                                         datos</p>
@@ -522,7 +522,7 @@
 
                             <!-- Botón/Link (opcional) -->
                             <button
-                                class="w-full py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 rounded transition-colors text-sm font-medium">
+                                class="hidden w-full py-2 bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 rounded transition-colors text-sm font-medium">
                                 Ver más detalles
                             </button>
                         </div>
@@ -558,7 +558,7 @@
                             </div>
 
                             <button
-                                class="w-full py-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 rounded transition-colors text-sm font-medium">
+                                class="hidden w-full py-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 rounded transition-colors text-sm font-medium">
                                 Ver más detalles
                             </button>
                         </div>
@@ -592,7 +592,7 @@
                             </div>
 
                             <button
-                                class="w-full py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 rounded transition-colors text-sm font-medium">
+                                class="hidden w-full py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 rounded transition-colors text-sm font-medium">
                                 Ver más detalles
                             </button>
                         </div>
@@ -626,7 +626,7 @@
                             </div>
 
                             <button
-                                class="w-full py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 rounded transition-colors text-sm font-medium">
+                                class="hidden w-full py-2 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 rounded transition-colors text-sm font-medium">
                                 Ver más detalles
                             </button>
                         </div>
@@ -635,11 +635,10 @@
                     <!-- Proyecto 5: Ejemplo con imagen real -->
                     <div
                         class="group bg-gray-800/50 dark:bg-gray-900/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 sm:hover:transform sm:hover:scale-105">
-                        <!-- Aquí irá tu imagen real -->
-                        <div class="relative h-48 bg-gray-700 overflow-hidden">
-                            <!-- Reemplaza el src con la ruta de tu imagen -->
-                            <img src="/ruta/a/tu/imagen.jpg" alt="Nombre del proyecto"
-                                class="w-full h-full object-cover" />
+                        <div class="relative h-48 bg-gradient-to-br from-blue-500/20 to-sky-500/20 overflow-hidden">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-6xl opacity-50">💡</span>
+                            </div>
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                 <span class="text-white font-semibold">Ver detalles</span>
@@ -659,7 +658,7 @@
                             </div>
 
                             <button
-                                class="w-full py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded transition-colors text-sm font-medium">
+                                class="hidden w-full py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded transition-colors text-sm font-medium">
                                 Ver más detalles
                             </button>
                         </div>
@@ -691,7 +690,7 @@
                             </div>
 
                             <button
-                                class="w-full py-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 rounded transition-colors text-sm font-medium">
+                                class="hidden w-full py-2 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 rounded transition-colors text-sm font-medium">
                                 Ver más detalles
                             </button>
                         </div>
