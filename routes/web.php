@@ -8,29 +8,12 @@ Route::get('/', function () {
 });
 
 Route::get('/descargar-cv', function () {
-    // Verifica primero qué archivos hay en la carpeta
-    $directory = storage_path('app/public/documents/');
-    
-    // Lista todos los archivos PDF en esa carpeta
-    $files = glob($directory . '*.pdf');
-    
-    // Si quieres ver qué archivos encuentra, descomenta la siguiente línea temporalmente
-    // dd($files); 
-    
-    // Ruta exacta del archivo
-    $path = storage_path('app/public/documents/Curriculum-Vitae-Alejandro-Girardi.pdf');
-    
-    // Verifica si el archivo existe
+    $path = public_path('documents/Curriculum-Vitae-Alejandro-Girardi.pdf');
+
     if (!file_exists($path)) {
-        // Muestra más información del error
-        return response()->json([
-            'error' => 'Archivo no encontrado',
-            'ruta_buscada' => $path,
-            'existe_directorio' => is_dir($directory),
-            'archivos_en_carpeta' => $files
-        ], 404);
+        abort(404, 'CV no encontrado');
     }
-    
+
     return response()->download($path, 'Curriculum Vitae Alejandro Girardi.pdf');
 })->name('download.cv');
 
